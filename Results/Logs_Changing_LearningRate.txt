@@ -1,0 +1,992 @@
+
+---------------------------------------------------------
+CASE I
+---------------------------------------------------------
+Changing Parameter in NN-> Learning rate
+Constant Parameters -> Number of iterations
+                       Number of nodes in hidden layers
+
+Here, we are setting number of iterations = 1000
+Learning rate values -> 0.01, 0.05, 0.1,0.2
+Number of nodes in hidden layer 1 = 4
+Number of nodes in hidden layer 1 = 2					   
+---------------------------------------------------------
+
+---------------------------------------------------------
+Checking the performance of Neural Net for following
+Activation functions -> sigmoid, tanh, relu
+						
+---------------------------------------------------------
+
+
+
+
+
+=========================================================+
+ADULT DATASET
+=========================================================
+
+---------------------------------------------------------
+ADULT DATASET [Learning Rate = 0.01]
+---------------------------------------------------------
+
+
+
+In [10]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='sigmoid 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[  0.26248982   1.82045802   0.13584314  -2.15131345]
+ [ -0.08288934  -0.09841362  -0.0981856    0.39348459]
+ [  0.28697605   0.19180144  -0.18152509  -0.2386871 ]
+ [  0.10206249  -0.02211112  -0.10852485  -0.33573438]
+ [  1.42354297   0.21316907   0.55088636  -1.52721806]
+ [  2.53426427  11.40755579   1.30143135   2.53202955]
+ [ -0.24122026  -0.10902928   0.06416635  -0.1566528 ]
+ [  1.18425591  -0.31573872  -3.14999593  -1.45629311]
+ [  0.23439853   0.13863918  -0.03422555  -0.16828765]
+ [  0.68358746   0.09936499   0.20171097  -0.86666488]
+ [  2.53580488  -0.06203413   2.26386451  -4.0853322 ]
+ [  0.38504357  -1.73563512  -0.06240903  -0.25392817]
+ [  0.36084539  -0.44969788   0.64565179  -0.65878873]
+ [  0.016736    -0.12064511   0.12355711   0.15559681]]
+Layer2 weights:
+[[-6.43624283 -7.57174372]
+ [ 6.56658997 -1.72874838]
+ [-4.71239204 -4.3308804 ]
+ [ 4.59862294 -2.3511042 ]]
+Layer3 weights:
+[[-3.82157054]
+ [-4.26335385]]
+After 1000 iterations, the train error is 0.0610987254883
+Activation Layer: sigmoid
+Test dataset error is 0.0617971391324
+
+In [11]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='tanh 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-3270068.69529722  -572146.54692619 -1445275.44806001   346515.03216016]
+ [  252022.27323386  -279383.78513123   228327.77539698   447711.72624488]
+ [ -340149.04027895   116724.78188576  -375907.04838936  -174135.24907052]
+ [  627892.5578833   -209075.8372693   1554762.00654348   251713.02846056]
+ [-3299237.40616704   295866.57077269    41494.31744643  -374971.47132689]
+ [ 2731779.79246604  1154776.91315904  1194078.36071521  -905507.75197834]
+ [ -377131.41642458   -79853.34242221  -232534.9321007    129614.73914357]
+ [ 3426631.92844699  1549655.6711713   2277528.09511198 -1614200.78078323]
+ [ -143401.95358156   -65228.28377396   -89190.18745624   333166.95300927]
+ [-2975771.11572859 -1199507.6052118  -2051335.96590874  1250060.0117911 ]
+ [-1950788.95531034  -171623.74716602  -262032.1503306   -291049.88952157]
+ [-2174428.21360916   206068.35777252  -791293.20434232  -103784.39379399]
+ [-3226114.07780253  -341870.68800141 -2124583.97399894    93498.98622066]
+ [  564430.98911125   -50643.11139113   549986.36652566   127625.8297213 ]]
+Layer2 weights:
+[[-2975.12082667  1531.89550989]
+ [-3780.52716391 -3274.23005664]
+ [ 1330.72941846 -1430.60504222]
+ [-2387.65186227 -1192.97139542]]
+Layer3 weights:
+[[   9.58941698]
+ [ 103.6743041 ]]
+After 1000 iterations, the train error is 0.734540782493
+Activation Layer: tanh
+Test dataset error is 0.452420424403
+
+In [12]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='relu 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[  3.60844098e+01  -1.05312937e+02   9.28691285e-01   1.03899263e+00]
+ [ -3.19100349e+01   7.41440534e+01  -2.50153298e+00  -7.16309112e+00]
+ [  2.27777131e+00  -4.97159963e+00  -3.09930514e-01   4.14434487e+00]
+ [  3.16373382e+01  -8.52240648e+01   2.07552418e-01   8.21346158e+00]
+ [  1.79356015e+01  -7.12311872e+01   1.27679733e+00   8.05404232e-01]
+ [  3.69783929e+01  -4.15973777e+01  -6.73808055e-01   9.59465443e+00]
+ [  4.54509961e+01  -1.03227145e+02   7.46279072e-01   1.29117500e+00]
+ [  2.72238400e+01  -7.43930939e+01  -1.20121373e+00   8.08657555e+00]
+ [  4.86092748e+00   3.53633729e+01   9.41055272e-01  -1.14746357e+01]
+ [  6.69869817e+00  -4.66393559e+00  -4.05672540e-01   3.25935096e+00]
+ [ -1.98285047e+00   1.65061087e+01  -1.08911120e+00  -5.78595614e-01]
+ [ -7.73622894e+00  -2.45516552e+02   1.95381134e+01   3.24982739e+00]
+ [ -2.92486335e+01   3.39412192e+01  -1.55804587e+00  -2.13103628e+00]
+ [ -8.38364865e+00   9.83297716e+00  -1.63714164e-01  -1.04827849e+01]]
+Layer2 weights:
+[[  1.91098771e-01  -9.40751757e+01]
+ [ -3.03108161e+00  -5.16633480e+02]
+ [ -6.84753060e-01  -1.81831313e+02]
+ [  4.51269796e-01  -6.52863133e+01]]
+Layer3 weights:
+[[ -2.07640811e-01]
+ [ -2.90740990e+02]]
+After 1000 iterations, the train error is 0.124544098143
+Activation Layer: relu
+Test dataset error is 0.124171087533
+
+
+---------------------------------------------------------
+ADULT DATASET [Learning Rate = 0.05]
+---------------------------------------------------------
+
+
+
+In [14]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='sigmoid 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.3773562   0.27605802 -0.44875324 -0.84188641]
+ [-0.72948898 -0.83294948 -0.65580461 -0.31719629]
+ [-0.20584302  0.08003697 -0.19928083  0.33560092]
+ [-0.61102123  0.69569771 -1.16986699  0.2133327 ]
+ [-0.40166603 -0.09393093 -0.11129788 -1.15277626]
+ [ 0.78587954  1.05431248 -0.86283067  0.73321418]
+ [ 0.7078882   0.74203431 -0.82051329 -1.03441098]
+ [-0.46886742  0.90746998 -1.51691141  0.31510941]
+ [ 0.91243725  0.02901969  0.6138333  -0.44785466]
+ [ 0.19586847  0.52343698 -0.4382878   0.09401853]
+ [ 0.87832986  0.41434705 -0.12508248  0.33294234]
+ [-0.86166962 -0.18465825  1.26063048 -0.5759504 ]
+ [-0.61489429 -0.87662185 -0.45171707 -0.07328762]
+ [-0.55371403 -0.47330828 -0.02633793 -0.77146358]]
+Layer2 weights:
+[[  4.91780252e+00  -1.06628750e+00]
+ [  5.32453695e+00  -1.25314037e-03]
+ [  6.72654938e+00  -7.51975709e-01]
+ [  5.79034674e+00  -5.86675976e-01]]
+Layer3 weights:
+[[-20.13251665]
+ [-17.83724812]]
+After 1000 iterations, the train error is 0.124544098133
+Activation Layer: sigmoid
+Test dataset error is 0.124171087523
+
+In [15]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='tanh 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -6.92816086e+08  -3.34637439e+09   6.60929705e+08   6.48834440e+08]
+ [  7.22979062e+07  -1.10804852e+09  -7.98802636e+07  -8.74620593e+07]
+ [  3.27688864e+08   2.63906004e+08  -1.97167243e+07  -9.01530229e+07]
+ [ -1.31145955e+09  -6.72099951e+08   1.97822752e+07   5.59910511e+08]
+ [ -2.12723792e+09  -1.71721623e+09   9.62728295e+08   1.41410347e+09]
+ [  7.31012014e+08   3.96894767e+09  -4.26860031e+08  -4.82660528e+08]
+ [ -3.32934699e+08  -7.58748132e+08  -3.91429317e+06   2.92268376e+08]
+ [ -1.77377246e+08   7.02352721e+09  -1.59599050e+08  -8.67466219e+07]
+ [ -3.38354036e+08  -1.34952359e+09   1.47112661e+08   1.51357927e+08]
+ [  7.61849897e+08  -6.01762467e+09   6.55818197e+07  -9.89171654e+07]
+ [ -3.54315192e+08  -1.33319727e+09   8.56733482e+08   8.58880314e+08]
+ [ -5.72604353e+08  -8.99480529e+08   3.90436367e+08   6.27936456e+08]
+ [ -7.34848766e+08  -3.44517066e+09   4.65539918e+08   5.77428887e+08]
+ [ -4.69959528e+08  -3.40752082e+08   4.47975682e+07   1.63326623e+08]]
+Layer2 weights:
+[[ -40605.84346162  -38912.33047308]
+ [  47994.86958806  123040.80345475]
+ [  20921.44557498   12700.15608223]
+ [  37883.1787227   -15160.39122513]]
+Layer3 weights:
+[[-245.10309405]
+ [-660.9423444 ]]
+After 1000 iterations, the train error is 0.799776193634
+Activation Layer: tanh
+Test dataset error is 0.441810344828
+
+In [16]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='relu 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -75.21749353   63.90516401   70.97296387  -37.93992105]
+ [-104.78673071  229.48808889   79.27007589  -40.32941286]
+ [  -7.55951869    6.22450285    9.66096866   24.25842229]
+ [  92.58937963 -274.69555574  -48.43030966   48.49065549]
+ [ -21.58153782  -24.0575154    29.90033838  -16.26253928]
+ [ 263.11563863 -398.180198    -86.4900323    86.30678481]
+ [ 132.35282854 -176.36040737   21.36142651  -18.70020914]
+ [ 216.36660642 -521.17244593 -145.95495706   81.37031377]
+ [  59.96782314   81.03117823   -1.77615535  -56.1488534 ]
+ [-134.9171686   348.20960064  156.30989766  -18.26441577]
+ [ -32.47764834   71.83272248   28.48931313  -11.47189308]
+ [ -34.56139325 -406.47743021 -177.9826575    -5.06533793]
+ [-311.15097744  517.01398903  212.61426066  -59.36983538]
+ [  13.85371238  -58.88772392  -15.46911634  -14.63643833]]
+Layer2 weights:
+[[  138.73818     -359.45803194]
+ [  871.78923193 -2089.0175845 ]
+ [   32.34231041 -1551.91123426]
+ [  115.29296842  -303.79069077]]
+Layer3 weights:
+[[ -207.63783211]
+ [-1323.26383643]]
+After 1000 iterations, the train error is 0.124544098143
+Activation Layer: relu
+Test dataset error is 0.124171087533
+
+
+
+---------------------------------------------------------
+ADULT DATASET [Learning Rate = 0.1]
+---------------------------------------------------------
+
+
+
+In [20]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='sigmoid 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.58875835  0.11146785  0.10226436 -1.28843864]
+ [-0.75248431 -0.85057341 -0.68412368 -0.32551058]
+ [-0.2052209   0.08244041 -0.23695085  0.30076301]
+ [-0.6309462   0.63516107 -1.39450862  0.08573121]
+ [-0.63794338 -0.30523942  0.49663081 -1.70175544]
+ [ 0.97027261  1.17210079 -1.35250935  1.08178409]
+ [ 0.66300085  0.69485612 -0.81111476 -1.14693004]
+ [-0.27738939  1.05865523 -2.23051303  0.7880066 ]
+ [ 0.90909294 -0.00829119  0.84391114 -0.52674247]
+ [ 0.01873023  0.377623    0.0868455  -0.31225388]
+ [ 0.77893619  0.3323628   0.18894183  0.08732255]
+ [-0.92978964 -0.26510381  1.70407086 -0.73912844]
+ [-0.80534003 -1.01329909  0.0578338  -0.50424561]
+ [-0.53068412 -0.47770959 -0.03582023 -0.6496518 ]]
+Layer2 weights:
+[[  9.68737003  -1.42599257]
+ [ 10.47046307  -0.40199593]
+ [ 14.24843021  -1.33202271]
+ [ 11.19189332  -1.0016849 ]]
+Layer3 weights:
+[[-39.36496445]
+ [-35.74629399]]
+After 1000 iterations, the train error is 0.124544098143
+Activation Layer: sigmoid
+Test dataset error is 0.124171087533
+
+In [21]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='tanh 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -1.01767425e+10   2.95274723e+09  -2.04963280e+10  -1.60546847e+10]
+ [ -9.81252459e+08   1.25226985e+09   7.34931360e+09   6.86039882e+09]
+ [ -3.21708680e+09   2.96092648e+09  -5.37040163e+09  -9.25830875e+09]
+ [  6.99755632e+09  -1.14607150e+10   1.29769396e+09   7.35242553e+09]
+ [ -3.40681238e+09  -1.84312676e+10  -3.35929615e+10  -2.47395615e+10]
+ [  7.81478001e+09  -7.70265057e+09   1.03619176e+10   3.95637704e+09]
+ [ -4.66217084e+09   5.44904861e+09  -7.65001069e+09  -1.84130537e+09]
+ [  1.56543998e+10  -2.08034935e+10   2.86719540e+09   2.30370034e+09]
+ [  5.62678352e+07   1.58265533e+09  -9.85412167e+07   7.00025048e+09]
+ [ -1.33201438e+10   2.09235934e+10  -2.65138720e+09  -9.06252270e+08]
+ [  8.48771970e+09  -1.51574794e+10  -3.31885895e+10  -1.54704766e+10]
+ [  5.20808609e+07  -3.84965964e+09  -1.66069939e+10  -5.58820498e+09]
+ [ -1.10374078e+10   3.71536913e+09  -1.60785742e+10  -1.43841704e+10]
+ [  2.75116246e+09  -5.31273655e+09   2.37408729e+09   4.70410059e+09]]
+Layer2 weights:
+[[  30873.10999143 -217040.06211797]
+ [ 173402.34074629   15937.87444862]
+ [-101998.78211683  -85354.4024836 ]
+ [-184223.95945532   76274.14314129]]
+Layer3 weights:
+[[-1049.11576426]
+ [  322.66629911]]
+After 1000 iterations, the train error is 0.549527519894
+Activation Layer: tanh
+Test dataset error is 0.784648541114
+
+In [22]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='relu 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -1899.6243147     799.48198823   3421.55220702   -678.9546163 ]
+ [ -2947.16879205   8548.67961634   3457.14899781   -778.11953504]
+ [  -201.11664598    258.51819671    681.09193453    459.51585101]
+ [  -882.05668909  -6713.58891806   1989.47566445    375.94802767]
+ [ -1834.21237089  -1748.42922442   3110.87966083   -526.37769943]
+ [  5235.14759652 -10538.58199183  -1989.13341237   1177.38404176]
+ [  2542.24264726  -5979.62165805   2193.47341891   -593.49197366]
+ [  3349.43743842 -14525.5585054   -4415.52836059   1084.06136591]
+ [  1715.33028587   1275.48419735  -1224.52368657   -719.82201805]
+ [ -2200.89315437   9079.16621662   6374.17509146   -244.3220484 ]
+ [  -689.10704917   2111.47774214   1507.77105336   -172.82454039]
+ [ -1046.04629361 -18889.35363637 -12134.04001337    -40.37685137]
+ [ -6658.62327106  14682.94709791   8328.54021002   -872.23478455]
+ [  -847.76668038    416.92202157   -395.37283115   -761.16931337]]
+Layer2 weights:
+[[  2321.07318717 -14165.16580861]
+ [  9949.17917618 -48737.60935338]
+ [   428.20779104 -41462.94380986]
+ [  1867.03412541 -10176.06452567]]
+Layer3 weights:
+[[ -2585.2931967 ]
+ [-29180.84348563]]
+After 1000 iterations, the train error is 0.124544098143
+Activation Layer: relu
+Test dataset error is 0.124171087533
+
+
+
+---------------------------------------------------------
+ADULT DATASET [Learning Rate = 0.2]
+---------------------------------------------------------
+
+
+
+In [24]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='sigmoid 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-1.0115607  -0.21771329  1.20429997 -2.18154242]
+ [-0.79848041 -0.885824   -0.74076779 -0.34214262]
+ [-0.20397675  0.08724736 -0.31229072  0.23108701]
+ [-0.6707969   0.51408726 -1.84379243 -0.1694726 ]
+ [-1.11049637 -0.7278585   1.71248775 -2.79971385]
+ [ 1.33905609  1.40767842 -2.33186707  1.77892294]
+ [ 0.5732234   0.60049891 -0.79231793 -1.37196965]
+ [ 0.10556039  1.36102546 -3.65771973  1.73379795]
+ [ 0.90240681 -0.08291294  1.30406806 -0.68451621]
+ [-0.33554139  0.08599465  1.13711444 -1.12479639]
+ [ 0.5801502   0.16839429  0.81699568 -0.40391356]
+ [-1.06603129 -0.42599467  2.5909507  -1.06548517]
+ [-1.18623074 -1.28665532  1.07693368 -1.36616229]
+ [-0.48462447 -0.48651251 -0.05478678 -0.40602869]]
+Layer2 weights:
+[[ 19.22650486  -2.14544229]
+ [ 20.76231507  -1.20350858]
+ [ 29.29219157  -2.4921574 ]
+ [ 21.99498632  -1.83172833]]
+Layer3 weights:
+[[-77.82983581]
+ [-71.56438078]]
+After 1000 iterations, the train error is 0.124544098143
+Activation Layer: sigmoid
+Test dataset error is 0.124171087533
+
+In [25]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='tanh 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -9.28099432e+10  -4.54956971e+11  -2.28099890e+11   4.76598863e+11]
+ [  1.65257947e+11  -2.37697501e+11  -8.25999663e+10   1.04314080e+11]
+ [ -1.93501210e+11   2.23622350e+11   6.51669986e+08  -1.16645547e+11]
+ [  2.72041078e+11  -5.26062356e+11  -5.32999564e+10   5.22681304e+11]
+ [ -5.59883062e+10  -7.27091010e+11  -6.51323418e+10   7.08913745e+11]
+ [  1.40063877e+11   5.49388597e+11   3.24255527e+11  -6.46001694e+11]
+ [  3.36269666e+11  -3.90406426e+11   4.41742932e+10   1.55619045e+11]
+ [ -5.10135811e+10   7.74601139e+11   5.29261029e+11  -7.22873576e+11]
+ [  2.01663299e+11  -3.62438505e+11  -1.60701596e+11   2.02452884e+11]
+ [ -7.70875116e+10  -5.56299741e+11  -5.35561990e+11   3.69718460e+11]
+ [ -1.22051322e+11  -1.69351701e+11  -1.73845306e+11   1.18700206e+11]
+ [ -8.43037594e+10  -1.35923185e+11  -1.02918667e+11   1.04388057e+11]
+ [  4.19454396e+10  -5.54863438e+11  -2.04767851e+11   4.79903287e+11]
+ [  1.11638975e+11  -2.22804039e+11  -2.03013745e+10   1.40814068e+11]]
+Layer2 weights:
+[[-1513247.10552655  1299771.48995959]
+ [ 1682770.93175549  -323043.22541183]
+ [ -383463.52598759  -844406.81767655]
+ [ -817812.40689131   553324.26476623]]
+Layer3 weights:
+[[-2558.23350954]
+ [  -72.14376068]]
+After 1000 iterations, the train error is 0.658197944297
+Activation Layer: tanh
+Test dataset error is 0.45275198939
+
+In [26]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult/NeuralNet.py', args='relu 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Adult')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -3.34640472e+04  -3.76106321e+04   1.15218159e+05  -9.65665519e+03]
+ [ -6.37288148e+04   2.86744003e+05   1.26373613e+05  -1.21885676e+04]
+ [ -4.50965747e+03   3.12234093e+04   2.99752140e+04   7.29117512e+03]
+ [ -5.47222733e+04  -1.73744349e+05   1.81206028e+05  -1.54986173e+03]
+ [ -5.86630893e+04  -1.00082062e+05   1.86343182e+05  -1.28910329e+04]
+ [  9.23193533e+04  -2.33467852e+05  -3.35624312e+04   1.39045746e+04]
+ [  4.47555898e+04  -1.95811151e+05   9.35457914e+04  -1.15683177e+04]
+ [  4.27225159e+04  -4.22057263e+05  -1.01011236e+05   1.15002095e+04]
+ [  4.05894005e+04  -3.76347746e+03  -8.26473410e+04  -7.34066630e+03]
+ [ -3.04593872e+04   2.83427683e+05   2.00518974e+05  -1.91610263e+03]
+ [ -2.23721719e+02   3.17856859e+04   6.78195906e+04   1.04692881e+03]
+ [ -2.33058294e+04  -8.75291827e+05  -6.67537588e+05   4.90248343e+02]
+ [ -1.21869823e+05   4.05504311e+05   2.97593697e+05  -1.17096429e+04]
+ [ -3.56300902e+04   4.77894898e+04   1.68580588e+03  -1.70250462e+04]]
+Layer2 weights:
+[[   29514.60588558  -373848.36827241]
+ [  116528.93189404 -1321438.25227048]
+ [    5002.87932826  -895242.41381626]
+ [   21150.89382016  -241846.77910204]]
+Layer3 weights:
+[[ -28077.77698427]
+ [-731347.8853039 ]]
+After 1000 iterations, the train error is 0.124544098143
+Activation Layer: relu
+Test dataset error is 0.124171087533
+
+
+
+
+---------------------------------------------------------
+CAR DATASET [Learning Rate = 0.01]
+---------------------------------------------------------
+
+
+
+In [40]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='sigmoid 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ 0.03279985 -1.15176482 -0.41988515 -2.4376274 ]
+ [ 0.25698399 -1.78487073 -0.72981074 -0.28735595]
+ [-1.16185353  0.22599083  0.19684712 -0.26937728]
+ [-0.426908   -0.97865553 -6.83281821  0.71348785]
+ [-2.53440335  0.35513376  0.15185433 -0.65191389]
+ [ 5.34029273  2.29591651 -6.08891067  1.1954498 ]]
+Layer2 weights:
+[[-1.70838124  3.49285792]
+ [ 2.59205776 -4.54457801]
+ [-4.26765676  5.88974819]
+ [ 1.57559081 -1.88736727]]
+Layer3 weights:
+[[  7.67804506]
+ [-10.08076454]]
+After 1000 iterations, the train error is 0.112220842952
+Activation Layer: sigmoid
+Test dataset error is 0.082388943715
+
+In [41]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='tanh 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-22.47086034  -5.76361015  49.38697794 -22.07355851]
+ [-11.36254466  -8.67368953   8.12642809  -3.05786791]
+ [ 11.99564582  -3.77709443 -33.27441267   2.96370241]
+ [ 19.82554827  34.2632805   -7.93175033   9.59497113]
+ [  2.53969608   4.79805407  19.5628593    1.08180272]
+ [ 22.60503329  72.16446166   7.58491357  18.31071433]]
+Layer2 weights:
+[[ 30.58602321  -9.72098508]
+ [  2.72205792   6.06055006]
+ [-13.04817147  -1.08724231]
+ [  0.2605501    0.27031702]]
+Layer3 weights:
+[[ 8.02148751]
+ [-3.5218975 ]]
+After 1000 iterations, the train error is 1.19980312206
+Activation Layer: tanh
+Test dataset error is 0.460868206384
+
+In [42]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='relu 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.35168646  0.60610917 -1.02180378 -0.3852811 ]
+ [-0.74326654 -0.83458758 -0.66647587 -0.30431701]
+ [-0.10903558  0.05023799 -0.23522207  0.38273003]
+ [-0.18059281  0.55215111 -1.059129    0.30619501]
+ [-0.28792777  0.18624553 -0.67889482 -0.60239954]
+ [ 0.42278652  1.01129295 -0.24408079  0.40409271]]
+Layer2 weights:
+[[ 0.3637711   0.78878184]
+ [-0.89392149 -0.87539828]
+ [-0.79830139  0.75335766]
+ [-0.80802564 -0.09549081]]
+Layer3 weights:
+[[ 0.75763972]
+ [-0.76653054]]
+After 1000 iterations, the train error is 0.369659666908
+Activation Layer: relu
+Test dataset error is 0.323188405797
+
+
+
+---------------------------------------------------------
+CAR DATASET [Learning Rate = 0.05]
+---------------------------------------------------------
+
+
+
+In [44]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='sigmoid 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ 2.0202256  -4.64236306 -0.07979755 -4.22381969]
+ [ 2.20064247 -4.64993611 -0.97040539 -4.31237908]
+ [-2.75554356  0.46735886  0.15903821 -0.30303047]
+ [-3.92897029 -2.68103164 -8.8569081  -1.15793731]
+ [-5.15273726  0.20091968 -0.10401026  3.9305907 ]
+ [ 8.89911387  7.40512628 -8.28505975  0.89641505]]
+Layer2 weights:
+[[-2.93376952  4.89886797]
+ [ 3.77602776 -6.15425221]
+ [-6.46050437  8.8176229 ]
+ [ 1.93317083 -2.18190989]]
+Layer3 weights:
+[[  9.36305585]
+ [-10.97101495]]
+After 1000 iterations, the train error is 0.111779139658
+Activation Layer: sigmoid
+Test dataset error is 0.0824462113498
+
+In [45]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='tanh 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ 28802.32917894 -21986.92415208  12443.21868536 -11460.89404684]
+ [ 20608.94891483 -19538.42761504   8345.67562652 -10239.88685242]
+ [-11565.01273402  12609.29844604  -1040.14440311  19080.45644647]
+ [-55702.83469712  51620.17240742 -21082.11351393  37706.4160668 ]
+ [ -8796.13270221   8360.17807883   2060.79839499   3267.43172223]
+ [-20556.54182729  14133.3223193    5793.51047359    187.85120187]]
+Layer2 weights:
+[[ 364.22130433  -72.71667183]
+ [ -83.27053148  147.06819334]
+ [  22.40301747 -231.98908809]
+ [ 265.69482836 -256.82522252]]
+Layer3 weights:
+[[ -7.67661024]
+ [ 10.14982197]]
+After 1000 iterations, the train error is 1.21157866609
+Activation Layer: tanh
+Test dataset error is 0.476186107166
+
+In [46]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='relu 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-1.09460834  1.2679499  -1.10993388 -0.34506608]
+ [-0.89037983 -0.91164666 -0.82246105 -0.28607086]
+ [ 0.28068229 -0.05934392 -0.52966646  0.43189416]
+ [ 1.46141794 -0.26418396 -1.51474575  0.16723499]
+ [-0.77807725  0.46170904 -0.51756959 -0.59680961]
+ [-0.29202397  1.31037212  0.27220264  0.48188265]]
+Layer2 weights:
+[[-1.19225771  0.78705589]
+ [-1.14996116 -0.68942965]
+ [-1.35015033  0.74164826]
+ [-0.82690288  0.15368494]]
+Layer3 weights:
+[[ 0.12508237]
+ [-4.09797498]]
+After 1000 iterations, the train error is 0.369659666908
+Activation Layer: relu
+Test dataset error is 0.323188405797
+
+
+---------------------------------------------------------
+CAR DATASET [Learning Rate = 0.1]
+---------------------------------------------------------
+
+
+
+In [48]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='sigmoid 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-2.25365008 -6.75455233 -0.66747962 -3.46267177]
+ [-1.52018622 -6.8074803  -0.58627375 -2.56902067]
+ [ 0.34362926  0.50382551  0.24635656  1.11781952]
+ [ 0.08476104 -2.32515751 -9.25454332  1.5263213 ]
+ [ 0.79790223  0.71853717 -0.34223457  3.14050409]
+ [ 1.49615809  7.81347902 -9.24771254 -3.79736558]]
+Layer2 weights:
+[[ -3.80041077  -0.96831721]
+ [ -6.03857138  -6.96511692]
+ [ -1.57205318  16.75039455]
+ [ -6.10875863  -7.39287251]]
+Layer3 weights:
+[[-2.46022794]
+ [-8.0027846 ]]
+After 1000 iterations, the train error is 0.203850968168
+Activation Layer: sigmoid
+Test dataset error is 0.163926801233
+
+In [49]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='tanh 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[  428802.062156     160138.20327998  -354353.97330579  -964391.84050524]
+ [  -54807.73965551  -162042.71660739  -127028.98456656  -502342.83424104]
+ [   93368.24213683     4101.89115277    42968.91126245   156152.30802696]
+ [  150538.4033274    479308.21274249   102966.62373158   805033.13401961]
+ [  -42151.64015128   111713.62417166   113306.15498201   381960.1915053 ]
+ [  -98941.40064567   473577.06017382   284634.542697    1113519.68087981]]
+Layer2 weights:
+[[ 1048.97577921 -1244.3311551 ]
+ [ 1713.73780289  -948.24559807]
+ [-1508.73921834   969.38354096]
+ [ -884.82539235  2391.0247188 ]]
+Layer3 weights:
+[[ 23.71398182]
+ [-42.81646002]]
+After 1000 iterations, the train error is 1.0470673425
+Activation Layer: tanh
+Test dataset error is 1.14492753623
+
+In [50]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='relu 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-2.0232607   2.09525082 -1.2200965  -0.29479731]
+ [-1.07427145 -1.0079705  -1.01744252 -0.26326318]
+ [ 0.76782963 -0.1963213  -0.89772194  0.49334931]
+ [ 3.51393137 -1.28460279 -2.08426668 -0.00646504]
+ [-1.39076411  0.80603843 -0.31591305 -0.5898222 ]
+ [-1.18553708  1.68422109  0.91755693  0.57912006]]
+Layer2 weights:
+[[-3.13729372  0.78489846]
+ [-1.47001075 -0.45696887]
+ [-2.0399615   0.72701152]
+ [-0.85049943  0.46515463]]
+Layer3 weights:
+[[-0.66561432]
+ [-8.26228053]]
+After 1000 iterations, the train error is 0.369659666908
+Activation Layer: relu
+Test dataset error is 0.323188405797
+
+
+---------------------------------------------------------
+CAR DATASET [Learning Rate = 0.2]
+---------------------------------------------------------
+
+
+
+In [52]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='sigmoid 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -5.78368417  -3.27769066  -2.00354132  -5.56167323]
+ [ -0.08724586  -4.24485603   0.25112108  -5.43819111]
+ [  0.40424401   0.63143171  -0.66882858   0.12159835]
+ [  1.91590152   5.60602211   1.98590868  10.2818943 ]
+ [  0.89336797   2.14505255  -1.30587837   0.20738891]
+ [  9.88735243   6.22760661  -3.29974018   1.44361097]]
+Layer2 weights:
+[[  5.7947901  -11.93724262]
+ [ -4.04041659 -12.32432013]
+ [ -8.75440097  10.98120607]
+ [-18.67669031   5.13301611]]
+Layer3 weights:
+[[ -9.633835  ]
+ [-10.19541248]]
+After 1000 iterations, the train error is 0.205997723003
+Activation Layer: sigmoid
+Test dataset error is 0.167413059948
+
+In [53]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='tanh 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -4144150.99519349   6360715.56835994   -932014.18560777
+    9232926.30860071]
+ [  1441274.57259243   5904502.79253573   2139735.0711375
+    7484975.46341843]
+ [   756298.40214107  -1968349.89668708   -690617.76625186
+   -2414656.30235732]
+ [ -3507927.80369969 -10509207.14571274  -4780049.83381077
+  -13330191.26938976]
+ [-17903266.04275692  -8320396.49017302 -13071377.29728487
+   -5568789.38067617]
+ [ -5449876.73923609 -17667953.04689813 -10277819.0263189
+  -19316031.40438714]]
+Layer2 weights:
+[[-3803.98595452  -191.84215814]
+ [-8092.06465246 -5134.72739645]
+ [-1454.47028537 -2873.56798036]
+ [-6306.21588319 -5617.74337124]]
+Layer3 weights:
+[[ 53.17277515]
+ [ 19.36244258]]
+After 1000 iterations, the train error is 0.298186639383
+Activation Layer: tanh
+Test dataset error is 0.431884057971
+
+In [54]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car/NeuralNet.py', args='relu 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Car')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-3.8805654   3.74985265 -1.44042175 -0.19425976]
+ [-1.44205468 -1.20061819 -1.40740546 -0.21764781]
+ [ 1.7421243  -0.47027607 -1.63383291  0.61625962]
+ [ 7.61895825 -3.32544045 -3.22330855 -0.3538651 ]
+ [-2.61613783  1.49469719  0.08740002 -0.57584738]
+ [-2.9725633   2.43191903  2.2082655   0.77359489]]
+Layer2 weights:
+[[-7.02736574  0.78058359]
+ [-2.11010992  0.00795269]
+ [-3.41958383  0.69773804]
+ [-0.89769253  1.088094  ]]
+Layer3 weights:
+[[ -2.24700769]
+ [-16.59089163]]
+After 1000 iterations, the train error is 0.369659666908
+Activation Layer: relu
+Test dataset error is 0.323188405797
+
+
+
+---------------------------------------------------------
+IRIS DATASET [Learning Rate = 0.01]
+---------------------------------------------------------
+
+
+
+In [65]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='sigmoid 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.62314328  0.78847488  0.23550211  0.36373598]
+ [ 0.70072329 -1.06106464 -1.26029104 -0.92733846]
+ [-1.31565871  0.57206924  1.3446665   1.42623502]
+ [-1.64811744  1.23348782  0.55079866  1.37426377]]
+Layer2 weights:
+[[-4.29992796 -5.08626202]
+ [ 0.93107274  1.10445948]
+ [ 0.73983474  0.88923468]
+ [ 1.37302982  2.21922977]]
+Layer3 weights:
+[[ 1.90592606]
+ [ 4.17825065]]
+After 1000 iterations, the train error is 0.213572169811
+Activation Layer: sigmoid
+Test dataset error is 0.214694475405
+
+In [66]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='tanh 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -4.28804700e-02  -3.39051617e+00   7.38318847e+00   2.70409924e+00]
+ [ -1.71066352e-01   1.36469543e+02   1.93837990e+02   5.76365451e+01]
+ [  1.95665527e-01  -2.99499095e+01  -3.93067420e+01  -5.06006752e+00]
+ [  3.09727915e+00  -8.96249597e+00  -8.95337182e+00   4.64895039e+00]]
+Layer2 weights:
+[[-30.01546653   8.4937797 ]
+ [  4.13464477   1.81972626]
+ [-16.41194248   6.51596209]
+ [ 12.377203     1.10630085]]
+Layer3 weights:
+[[-1.67543329]
+ [ 0.12561963]]
+After 1000 iterations, the train error is 0.353498195045
+Activation Layer: tanh
+Test dataset error is 0.396616646828
+
+In [67]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='relu 0.01 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.20298523  0.42156655  0.32775245 -0.40186785]
+ [-0.70666794 -0.8430378  -1.03842615 -0.32296932]
+ [-0.24032353  0.05898249  1.2768957   0.37939782]
+ [-0.62437802  0.74077068  0.45179467  0.34870012]]
+Layer2 weights:
+[[-0.85803592 -0.57797914]
+ [-0.73839777 -0.58269183]
+ [-1.08019846 -0.78347551]
+ [-0.401366    0.39081433]]
+Layer3 weights:
+[[-0.40645133]
+ [-1.36839074]]
+After 1000 iterations, the train error is 0.836134453782
+Activation Layer: relu
+Test dataset error is 0.862068965517
+
+
+
+---------------------------------------------------------
+IRIS DATASET [Learning Rate = 0.05]
+---------------------------------------------------------
+
+
+
+In [69]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='sigmoid 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.51184166  0.8613477   0.35252495  0.37439609]
+ [ 1.17314087 -1.15606182 -1.29072546 -1.08682757]
+ [-1.51159404  0.71998499  1.50253968  1.54637285]
+ [-1.83553328  1.37517725  0.70265779  1.48937121]]
+Layer2 weights:
+[[-6.32310474 -7.10382463]
+ [ 1.12667033  1.33914011]
+ [ 0.8558311   1.05464187]
+ [ 1.58049758  2.46827933]]
+Layer3 weights:
+[[ 2.50920927]
+ [ 5.38708087]]
+After 1000 iterations, the train error is 0.210654614614
+Activation Layer: sigmoid
+Test dataset error is 0.211791040207
+
+In [70]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='tanh 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[  -8.60177123   -7.41410908    0.41531555   12.66126707]
+ [   1.17567484    2.78973522    1.19552404  221.09781343]
+ [ -18.46319301  -10.04715579    1.07559171  -30.92514568]
+ [ -25.57180198  -13.85523093   -5.08356895   28.07497359]]
+Layer2 weights:
+[[  0.89570268   6.19094761]
+ [-13.43840706  26.01462982]
+ [-17.31891171  31.53943209]
+ [  7.82370905 -18.39813949]]
+Layer3 weights:
+[[ 2.0208564 ]
+ [ 0.45685418]]
+After 1000 iterations, the train error is 0.416612876972
+Activation Layer: tanh
+Test dataset error is 0.397169030746
+
+In [71]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='relu 0.05 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.35110218  0.34523679  5.63784723 -0.42799983]
+ [-0.70738685 -0.95389774 -2.68221244 -0.37933243]
+ [-0.37575746 -0.01562141  7.03092241  0.41523307]
+ [-0.75750811  0.6789139   6.03987261  0.37976051]]
+Layer2 weights:
+[[-3.62861802 -3.35941432]
+ [-0.81508437 -0.49827107]
+ [-7.80694884 -7.66347015]
+ [-0.51422343  0.41549071]]
+Layer3 weights:
+[[-5.04336987]
+ [-9.99880699]]
+After 1000 iterations, the train error is 0.836134453782
+Activation Layer: relu
+Test dataset error is 0.862068965517
+
+
+
+---------------------------------------------------------
+IRIS DATASET [Learning Rate = 0.1]
+---------------------------------------------------------
+
+
+
+In [73]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='sigmoid 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.48519379  0.89030724  0.38142328  0.38367174]
+ [ 1.30019413 -1.19056293 -1.30076052 -1.13258882]
+ [-1.6016008   0.78115455  1.54714055  1.59573202]
+ [-1.92748796  1.43489475  0.74555305  1.5389453 ]]
+Layer2 weights:
+[[-7.13241611 -7.90040969]
+ [ 1.22400705  1.45740395]
+ [ 0.87177528  1.09209735]
+ [ 1.66383973  2.57313372]]
+Layer3 weights:
+[[ 2.77150314]
+ [ 5.86694237]]
+After 1000 iterations, the train error is 0.210359769981
+Activation Layer: sigmoid
+Test dataset error is 0.211492734537
+
+In [74]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='tanh 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -92.08390449  -83.31610448  153.64123589 -109.42826963]
+ [  50.43066729   34.02358948  -14.19455278  -60.81257459]
+ [-153.51190874  -33.57779032  -30.46348252 -181.85380641]
+ [ -66.53018983 -526.34634682 -408.63756221  632.02715525]]
+Layer2 weights:
+[[ 42.61217173  19.3888195 ]
+ [-25.56067115  -3.93315335]
+ [-41.80078997   2.00407563]
+ [-42.63329475 -42.12157471]]
+Layer3 weights:
+[[-0.88997277]
+ [-0.36796131]]
+After 1000 iterations, the train error is 0.477671035953
+Activation Layer: tanh
+Test dataset error is 0.38983986282
+
+In [75]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='relu 0.1 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -0.53624836   0.2498246   12.27546571  -0.46066481]
+ [ -0.70828548  -1.09247267  -4.7369453   -0.4497863 ]
+ [ -0.54504986  -0.10887629  14.22345579   0.46002714]
+ [ -0.92392072   0.60159292  13.02497004   0.418586  ]]
+Layer2 weights:
+[[ -7.09184565  -6.8362083 ]
+ [ -0.91094261  -0.39274512]
+ [-16.21538681 -16.26346346]
+ [ -0.65529523   0.44633619]]
+Layer3 weights:
+[[-10.83951804]
+ [-20.7868273 ]]
+After 1000 iterations, the train error is 0.836134453782
+Activation Layer: relu
+Test dataset error is 0.862068965517
+
+
+---------------------------------------------------------
+IRIS DATASET [Learning Rate = 0.2]
+---------------------------------------------------------
+
+
+
+In [77]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='sigmoid 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: sigmoid
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[-0.45577308  0.91840388  0.39443423  0.39138815]
+ [ 1.4070052  -1.23394531 -1.31483711 -1.17828056]
+ [-1.69522029  0.84903373  1.57614852  1.6467185 ]
+ [-2.02986246  1.50261652  0.77342561  1.5924753 ]]
+Layer2 weights:
+[[-7.91992837 -8.67666567]
+ [ 1.35086005  1.61629294]
+ [ 0.85133304  1.10257898]
+ [ 1.7516183   2.69241909]]
+Layer3 weights:
+[[ 3.02333904]
+ [ 6.34458851]]
+After 1000 iterations, the train error is 0.210219009424
+Activation Layer: sigmoid
+Test dataset error is 0.211346873476
+
+In [78]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='tanh 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: tanh
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -3.58520929e+02   7.36408241e+02   2.45480127e+03  -2.55895897e+03]
+ [  9.69981658e+02  -5.28586651e+02  -1.82183624e+03  -1.98633991e+03]
+ [ -2.31152977e+03   3.40540167e+03   1.05935889e+03  -5.84644433e+03]
+ [ -6.25884678e+00   3.66811606e+03   3.50049491e+03  -1.27737146e+04]]
+Layer2 weights:
+[[ -20.7960748   -49.75092461]
+ [  -9.2656184   133.06776835]
+ [  39.99028954   37.73567428]
+ [ -17.00229656  -77.97684642]]
+Layer3 weights:
+[[ 2.41607086]
+ [-0.39427842]]
+After 1000 iterations, the train error is 0.369169024536
+Activation Layer: tanh
+Test dataset error is 0.39595719398
+
+In [79]: runfile('B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris/NeuralNet.py', args='relu 0.2 1000 4 2', wdir='B:/MS/Semester 3 (Spring 18)/CS6375.003_MachineLearning/Assignments/4_Assignment3/NeuralNet/partii/Iris')
+Activation Layer: relu
+The final weight vectors are (starting from input to output layers)
+Layer1 weights:
+[[ -0.90654073   0.05900022  25.55070267  -0.52599477]
+ [ -0.71008275  -1.36962252  -8.84641102  -0.59069406]
+ [ -0.88363468  -0.29538605  28.60852255   0.54961529]
+ [ -1.25674594   0.44695098  26.99516488   0.49623699]]
+Layer2 weights:
+[[-14.01830091 -13.78979625]
+ [ -1.1026591   -0.18169321]
+ [-33.03226276 -33.46345006]
+ [ -0.93743881   0.50802715]]
+Layer3 weights:
+[[-22.43181438]
+ [-42.36286793]]
+After 1000 iterations, the train error is 0.836134453782
+Activation Layer: relu
+Test dataset error is 0.862068965517
+
+
+
+
